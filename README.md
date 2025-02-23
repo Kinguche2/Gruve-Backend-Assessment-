@@ -132,15 +132,17 @@ The project includes end-to-end (e2e) tests to ensure the API works as expected.
 
 ```bash
 POST /events/event-id/tasks
-Content-Type: application/json
+```
 
+- Content-Type: application/json
+
+```json
 {
-"title": "Test Task",
-"description": "Test Description",
-"due_time": "2023-12-31T23:59:59Z",
-"assigned_to": [1, 2]
+  "title": "Test Task",
+  "description": "Test Description",
+  "due_time": "2023-12-31T23:59:59Z",
+  "assigned_to": [1, 2]
 }
-
 ```
 
 **Response**:
