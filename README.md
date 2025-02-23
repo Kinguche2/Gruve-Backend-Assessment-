@@ -39,28 +39,34 @@ This project is a RESTful API built with NestJS for managing tasks associated wi
 
 Before running the project, ensure you have the following installed:
 
-- <Node.js> (v16 or higher)
-- <npm> or <Yarn>
-- <Docker> (optional, for running the database locally)
+- Node.js v16 or higher
+- npm or Yarn
+- Docker (optional, for running the database locally)
 
 ---
 
 ## Setup Instructions
 
 1. **Clone the Repository**:
-   <```bash
+
+   ```bash
    git clone https://github.com/your-username/task-management-api.git
    cd task-management-api
 
-   ```>
+   ```
+
+   ```
 
    ```
 
 2. **Install Dependencies**:
-   <```bash
+
+   ```bash
    npm install
 
-   ```>
+   ```
+
+   ```
 
    ```
 
@@ -68,32 +74,44 @@ Before running the project, ensure you have the following installed:
 
    - Ensure you have a PostgreSQL database running.
    - Update the `.env` file with your database connection details:
-     <```env
+
+     ```env
      DATABASE_URL="postgresql://user:password@localhost:5432/task_management"
-     ```>
+     ```
+
+     ```
 
      ```
 
 4. **Run Database Migrations**:
-   <```bash
+
+   ```bash
    npx prisma migrate dev --name init
 
-   ```>
+   ```
+
+   ```
 
    ```
 
 5. **Start the Application**:
-   <```bash
+
+   ```bash
    npm run start
 
-   ```>
+   ```
+
+   ```
 
    ```
 
 6. **Run the Application in Development Mode**:
-   <```bash
+
+   ```bash
    npm run start:dev
-   ```>
+   ```
+
+   ```
 
    ```
 
@@ -103,13 +121,13 @@ Before running the project, ensure you have the following installed:
 
 ### Tasks
 
-| <      | Method                           | Endpoint                        | Description |
+|        | Method                           | Endpoint                        | Description |
 | ------ | -------------------------------- | ------------------------------- | ----------- |
 | POST   | `/events/:eventId/tasks`         | Create a new task for an event. |
 | GET    | `/events/:eventId/tasks`         | Get all tasks for an event.     |
 | GET    | `/events/:eventId/tasks/:taskId` | Get a specific task by ID.      |
 | PUT    | `/events/:eventId/tasks/:taskId` | Update a specific task by ID.   |
-| DELETE | `/events/:eventId/tasks/:taskId` | Delete a specific task by ID.   | >           |
+| DELETE | `/events/:eventId/tasks/:taskId` | Delete a specific task by ID.   |             |
 
 ---
 
@@ -118,18 +136,25 @@ Before running the project, ensure you have the following installed:
 The project includes end-to-end (e2e) tests to ensure the API works as expected. To run the tests:
 
 1. **Run the Tests**:
-   <```bash
+
+   ```bash
    npm run test:e2e
 
-   ```>
+   ```
+
+   ```
 
    ```
 
 2. **Test Coverage**:
+
    - To generate a test coverage report, run:
-     <```bash
+
+     ```bash
      npm run test:cov
-     ```>
+     ```
+
+     ```
 
      ```
 
@@ -140,7 +165,8 @@ The project includes end-to-end (e2e) tests to ensure the API works as expected.
 ### Create a Task
 
 **Request**:
-<```bash
+
+```bash
 POST /events/event-id/tasks
 Content-Type: application/json
 
@@ -151,10 +177,11 @@ Content-Type: application/json
 "assigned_to": [1, 2]
 }
 
-````>
+```
 
 **Response**:
-<```json
+
+```json
 {
   "id": "task-id",
   "title": "Test Task",
@@ -163,16 +190,19 @@ Content-Type: application/json
   "event_id": "event-id",
   "assigned_to": [1, 2]
 }
-```>
+```
 
 ### Get All Tasks for an Event
+
 **Request**:
-<```bash
+
+```bash
 GET /events/event-id/tasks
-```>
+```
 
 **Response**:
-<```json
+
+```json
 [
   {
     "id": "task-id-1",
@@ -189,11 +219,13 @@ GET /events/event-id/tasks
     "assigned_to": [2]
   }
 ]
-```>
+```
 
 ### Update a Task
+
 **Request**:
-<```bash
+
+```bash
 PUT /events/event-id/tasks/task-id
 Content-Type: application/json
 
@@ -203,10 +235,11 @@ Content-Type: application/json
   "due_time": "2023-12-31T23:59:59Z",
   "assigned_to": [1, 2]
 }
-```>
+```
 
 **Response**:
-<```json
+
+```json
 {
   "id": "task-id",
   "title": "Updated Task",
@@ -214,16 +247,19 @@ Content-Type: application/json
   "due_time": "2023-12-31T23:59:59.000Z",
   "assigned_to": [1, 2]
 }
-```>
+```
 
 ### Delete a Task
+
 **Request**:
-<```bash
+
+```bash
 DELETE /events/event-id/tasks/task-id
-```>
+```
 
 **Response**:
-<```json
+
+```json
 {
   "id": "task-id",
   "title": "Test Task",
@@ -231,7 +267,7 @@ DELETE /events/event-id/tasks/task-id
   "due_time": "2023-12-31T23:59:59.000Z",
   "event_id": "event-id"
 }
-```>
+```
 
 ---
 
@@ -249,7 +285,10 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 
 ## Contact
 
-For questions or feedback, please contact <Your Name> at <your.email@example.com>.
+For questions or feedback, please contact <Uche Ogbonna> at <ucheogbonnak@gmail.com>.
 
 ---
-````
+
+```
+
+```
