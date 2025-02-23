@@ -1,4 +1,4 @@
-# Task Management API
+# Event Management API
 
 This project is a RESTful API built with NestJS for managing tasks associated with events. It allows users to create, read, update, and delete tasks, as well as assign tasks to specific users. The API is secured with JWT authentication and uses Prisma as the ORM for database interactions.
 
