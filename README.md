@@ -50,8 +50,8 @@ Before running the project, ensure you have the following installed:
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/your-username/task-management-api.git
-   cd task-management-api
+   git clone https://github.com/Kinguche2/Gruve-Backend-Assessment-.git
+   cd event-task-api
    ```
 
 2. **Install Dependencies**:
