@@ -142,20 +142,12 @@ The project includes end-to-end (e2e) tests to ensure the API works as expected.
 
    ```
 
-   ```
-
-   ```
-
 2. **Test Coverage**:
 
    - To generate a test coverage report, run:
 
      ```bash
      npm run test:cov
-     ```
-
-     ```
-
      ```
 
 ---
@@ -229,6 +221,9 @@ GET /events/event-id/tasks
 PUT /events/event-id/tasks/task-id
 Content-Type: application/json
 
+```
+
+```json
 {
   "title": "Updated Task",
   "description": "Updated Description",
