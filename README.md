@@ -52,22 +52,12 @@ Before running the project, ensure you have the following installed:
    ```bash
    git clone https://github.com/your-username/task-management-api.git
    cd task-management-api
-
-   ```
-
-   ```
-
    ```
 
 2. **Install Dependencies**:
 
    ```bash
    npm install
-
-   ```
-
-   ```
-
    ```
 
 3. **Set Up the Database**:
@@ -79,40 +69,22 @@ Before running the project, ensure you have the following installed:
      DATABASE_URL="postgresql://user:password@localhost:5432/task_management"
      ```
 
-     ```
-
-     ```
-
 4. **Run Database Migrations**:
 
    ```bash
    npx prisma migrate dev --name init
-
-   ```
-
-   ```
-
    ```
 
 5. **Start the Application**:
 
    ```bash
    npm run start
-
-   ```
-
-   ```
-
    ```
 
 6. **Run the Application in Development Mode**:
 
    ```bash
    npm run start:dev
-   ```
-
-   ```
-
    ```
 
 ---
