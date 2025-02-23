@@ -16,6 +16,7 @@ import { EventsService } from './events.service';
 import { CreateEventDto, EventDto } from './dto/create-event.dto';
 import { UpdateEventDto } from './dto/update-event.dto';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
+import { omit } from 'lodash';
 
 @Controller('events')
 @UseGuards(JwtAuthGuard)
@@ -26,7 +27,8 @@ export class EventsController {
   @Post()
   async create(@Body() data: CreateEventDto): Promise<EventDto> {
     const file = await this.eventsService.create(data);
-    return file;
+    const withOutShard = omit(file, ['shard']);
+    return withOutShard;
   }
 
   @Get()
@@ -50,7 +52,8 @@ export class EventsController {
 
   @Get(':id')
   async findOne(@Param('id') id: string): Promise<EventDto> {
-    return await this.eventsService.findOne(id);
+    const withOutShard = await this.eventsService.findOne(id);
+    return withOutShard;
   }
 
   @Put(':id')
@@ -60,7 +63,8 @@ export class EventsController {
     @Body() updateEventDto: UpdateEventDto,
   ): Promise<EventDto> {
     const result = await this.eventsService.update(id, updateEventDto);
-    return result;
+    const withOutShard = omit(result, ['shard']);
+    return withOutShard;
   }
 
   @Delete(':id')
