@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "Event" ADD COLUMN     "shard" INTEGER NOT NULL DEFAULT 0;
